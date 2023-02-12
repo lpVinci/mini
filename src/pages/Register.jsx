@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 import Add from '../img/addAvatar.png'
 import {  ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Register = () => {
 
@@ -79,7 +79,7 @@ const Register = () => {
                 <button>Sign Up</button>
                 {err && <span>Something Went Wrong!!</span>}
             </form>
-            <p>Already have an account? <a href='/login'>Login</a></p>
+            <p>Already have an account? <Link to='/login'>Login</Link></p>
             </div>
         </div>
     )

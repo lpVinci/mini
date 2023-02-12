@@ -1,8 +1,6 @@
-import { doc, onSnapshot } from 'firebase/firestore'
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import { AuthContext } from '../context/AuthContext'
 import { ChatContext } from '../context/ChatContext'
-import { db } from '../firebase'
 
 const Message = ({message}) => {
     const { currentUser } = useContext(AuthContext)

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -41,7 +41,7 @@ const Login = () => {
                 <button>Sign In</button>
                 {err && <span>Something Went Wrong</span>}
             </form>
-            <p>Doesn't have an account? <a href='/register'>Register</a></p>
+            <p>Doesn't have an account? <Link to='/register'>Register</Link></p>
             </div>
         </div>
     )
